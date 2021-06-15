@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1110</width>
+    <height>805</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#F0E3E2;</string>
+  </property>
+  <property name="locale">
+   <locale language="Russian" country="Russia"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>1110</width>
+     <height>702</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1110</width>
+     <height>702</height>
+    </size>
+   </property>
+   <widget class="QTextEdit" name="text_questions">
+    <property name="geometry">
+     <rect>
+      <x>335</x>
+      <y>159</y>
+      <width>761</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>IBeamCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #F4E9ED;
+font-family: Lemonade;
+font-size:18px;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="text_answers">
+    <property name="geometry">
+     <rect>
+      <x>335</x>
+      <y>489</y>
+      <width>761</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>IBeamCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #F4E9ED;
+font-family: Lemonade;
+font-size:18px;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="main_name">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>10</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lemonade</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: Lemonade;
+font-size: 30px;</string>
+    </property>
+    <property name="text">
+     <string>Классификация намерений</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="intents">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>119</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lemonade</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: Lemonade;
+font-size:20px;</string>
+    </property>
+    <property name="text">
+     <string>Намерения:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="questions">
+    <property name="geometry">
+     <rect>
+      <x>345</x>
+      <y>119</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lemonade</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: Lemonade;
+font-size:20px;</string>
+    </property>
+    <property name="text">
+     <string>Вопросы (утверждения):</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="anwers">
+    <property name="geometry">
+     <rect>
+      <x>345</x>
+      <y>449</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lemonade</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: Lemonade;
+font-size:20px;</string>
+    </property>
+    <property name="text">
+     <string>Ответы:</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="list_intents">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>291</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #F4E9ED;
+font-family: Lemonade;
+font-size:18px;</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="button_add">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>109</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #E6CFD7;</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>picture/Add.png</normalon>
+     </iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="button_delete">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>110</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #E6CFD7;</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>picture/Delete.png</normalon>
+     </iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="button_edit">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>110</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #E6CFD7;</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>picture/Edit.png</normaloff>picture/Edit.png</iconset>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="info_data">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>0</y>
+      <width>321</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>321</width>
+      <height>141</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>321</width>
+      <height>141</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #F4E9ED;
+font-family: Lemonade;
+font-size:18px;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menu_app">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1110</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>О программе</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

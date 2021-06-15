@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QTableWidgetItem
 
 
 class Ui_MainWindow(object):
@@ -110,8 +111,19 @@ class Ui_MainWindow(object):
                                      "font-family: Lemonade;\n"
                                      "font-size:18px;")
         self.info_data.setObjectName("info_data")
-        self.info_data.setColumnCount(0)
-        self.info_data.setRowCount(0)
+        self.info_data.setColumnCount(2)
+        self.info_data.setRowCount(3)
+        self.info_data.setColumnWidth(0, 200)
+        self.info_data.setColumnWidth(1, 99)
+        self.info_data.setRowHeight(0, 36)
+        self.info_data.setRowHeight(1, 36)
+        self.info_data.setRowHeight(2, 36)
+        self.info_data.setHorizontalHeaderItem(0, QTableWidgetItem('Характеристика'))
+        self.info_data.setHorizontalHeaderItem(1, QTableWidgetItem('Значение'))
+        self.info_data.setItem(0, 0, QTableWidgetItem('Кол-во интентов'))
+        self.info_data.setItem(1, 0, QTableWidgetItem('Кол-во утверждений'))
+        self.info_data.setItem(2, 0, QTableWidgetItem('Кол-во ответов'))
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menu_app = QtWidgets.QMenuBar(MainWindow)
         self.menu_app.setGeometry(QtCore.QRect(0, 0, 1110, 26))

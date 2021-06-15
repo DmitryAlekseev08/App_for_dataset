@@ -11,9 +11,8 @@ from PyQt5.QtWidgets import QMessageBox, QDialog
 from PyQt5 import QtCore, QtWidgets
 
 
-class Change_Intent_Dialog(QDialog):
-    def __init__(self, parent=None):
-        super(Change_Intent_Dialog, self).__init__(parent)
+class Change_Intent_Dialog(object):
+    def __init__(self):
         self.old_name = None
         self.new_name = None
 
@@ -56,8 +55,8 @@ class Change_Intent_Dialog(QDialog):
                                          "font-size:16px;")
         self.button_cancel.setObjectName("button_cancel")
 
-        self.button_cancel.clicked.connect(self.Dialog_Close)
-        self.button_ok.clicked.connect(self.Enter_Intent)
+        self.button_cancel.clicked.connect(Dialog.reject)
+        self.button_ok.clicked.connect(Dialog.accept)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -69,16 +68,3 @@ class Change_Intent_Dialog(QDialog):
         self.button_ok.setText(_translate("Dialog", "ОК"))
         self.button_cancel.setText(_translate("Dialog", "Отмена"))
         Dialog.setWindowTitle(_translate("Dialog", "Изменение названия интента"))
-
-    # Обработка нажатия на кнопку Cancel
-    def Dialog_Close(self):
-        self.close()
-
-    # Обработка нажатия на кнопку OK
-    def Enter_Intent(self):
-        if (not self.old_name_line.text()) and (not self.new_name_line.text()):
-            QMessageBox.critical(self, "Ошибка ", "Вы не ввели название интента.", QMessageBox.Ok)
-        else:
-            self.old_name = self.old_name_line.text()
-            self.new_name = self.new_name_line.text()
-            self.close()
